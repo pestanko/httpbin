@@ -814,6 +814,55 @@ def xml():
     return response
 
 
+
+store = {}
+
+@app.route('/store/<string:key>', methods=('POST', 'PUT'))
+def put_data_into_store(key):
+    """Store temporary data in store"""
+    global store
+
+    if key == '':
+        return status_code(406)
+
+    special_json = json.dumps(get_dict(
+        'url', 'args', 'form', 'data', 'origin', 'headers', 'files', 'json'))
+
+    if key in store:
+        store[key].append(special_json)
+    else:
+        store[key] = [special_json]
+
+    return special_json
+
+
+@app.route('/store', methods=('GET', ))
+@app.route('/store/<string:key>', methods=('GET', ))
+def get_data_into_store(key=None):
+    global store
+    """Get data from store"""
+    
+    keys = [ key for key in store.keys() ]
+
+    if key is None or key not in store:
+        return json.dumps(keys)
+
+    return json.dumps(store[key])
+
+
+@app.route('/store/<string:key>', methods=('DELETE', ))
+def delete_data_from_store(key):
+    global store
+    """Delete data from store"""
+
+    if key not in store:
+        return status_code(404)
+
+    del store[key]
+
+    return status_code(200)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", type=int, default=5000)
