@@ -12,29 +12,11 @@
         ]
     },
     "default": {
-        "Flask": {
-            "version": "==0.12.1"
-        },
-        "Flask-Cache": {
-            "version": "==0.13.1"
-        },
-        "Flask-Common": {
-            "version": "==0.1.0"
-        },
-        "Jinja2": {
-            "version": "==2.9.6"
-        },
-        "MarkupSafe": {
-            "version": "==1.0"
-        },
-        "Werkzeug": {
-            "version": "==0.12.1"
-        },
         "blinker": {
             "version": "==1.4"
         },
         "brotlipy": {
-            "version": "==0.6.0"
+            "version": "==0.7.0"
         },
         "cffi": {
             "version": "==1.10.0"
@@ -55,13 +37,19 @@
             "version": "==0.6.0"
         },
         "decorator": {
-            "version": "==4.0.11"
+            "version": "==4.1.2"
         },
-        "enum34": {
-            "version": "==1.1.6"
+        "flask": {
+            "version": "==0.12.2"
+        },
+        "flask-cache": {
+            "version": "==0.13.1"
+        },
+        "flask-common": {
+            "version": "==0.2.0"
         },
         "gevent": {
-            "version": "==1.2.1"
+            "version": "==1.2.2"
         },
         "greenlet": {
             "version": "==0.4.12"
@@ -75,20 +63,26 @@
         "itsdangerous": {
             "version": "==0.24"
         },
+        "jinja2": {
+            "version": "==2.9.6"
+        },
+        "markupsafe": {
+            "version": "==1.0"
+        },
         "maya": {
-            "version": "==0.1.8"
+            "version": "==0.3.2"
         },
         "meinheld": {
             "version": "==0.6.1"
         },
         "pendulum": {
-            "version": "==1.2.0"
+            "version": "==1.2.4"
         },
         "pycparser": {
-            "version": "==2.17"
+            "version": "==2.18"
         },
         "python-dateutil": {
-            "version": "==2.6.0"
+            "version": "==2.6.1"
         },
         "pytz": {
             "version": "==2017.2"
@@ -97,22 +91,22 @@
             "version": "==2017.2"
         },
         "raven": {
-            "version": "==6.0.0"
+            "version": "==6.1.0"
         },
         "regex": {
-            "version": "==2017.04.29"
-        },
-        "ruamel.ordereddict": {
-            "version": "==0.4.9"
+            "version": "==2017.07.28"
         },
         "ruamel.yaml": {
-            "version": "==0.14.11"
+            "version": "==0.15.32"
         },
         "six": {
             "version": "==1.10.0"
         },
         "tzlocal": {
             "version": "==1.4"
+        },
+        "werkzeug": {
+            "version": "==0.12.2"
         },
         "whitenoise": {
             "version": "==3.3.0"
